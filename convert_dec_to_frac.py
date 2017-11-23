@@ -10,9 +10,9 @@ import sys
 dec = float(sys.argv[1])
 #If input number is a decimal number, convert decimal into fraction, mod 1 on a decimal number will not return 0
 if(Decimal(dec) % 1 != 0): 
-	dec = int(dec*100)
-	saved_gcd = gcd(dec,100)
-	dec = int(dec*0.1)
+	dec = int(dec*10000)
+	saved_gcd = gcd(dec,10000)
+	dec = int(dec*0.001)
 	print(dec, "/", (saved_gcd))
 #If a non-decimal number has been set, just add /1 to make a fraction of it
 else:
