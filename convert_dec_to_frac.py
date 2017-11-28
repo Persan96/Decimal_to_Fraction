@@ -9,7 +9,6 @@ import sys
 def gcd(a,b) :
 	return_gcd = b
 	rest = a % b
-	print(rest, a, b)
 	if(rest != 0):
 		return_gcd = gcd(b,rest)
 	return return_gcd
@@ -24,7 +23,6 @@ if(Decimal(dec) % 1 != 0):
 	bottom = 10**to_mul_with
 	#get gcd between top and bottom
 	saved_gcd = gcd(top, bottom)
-	print(saved_gcd, top, bottom)
 	#Divide top and bottom with gcd
 	bottom = int(bottom/saved_gcd)
 	top = int(top/saved_gcd)
