@@ -7,22 +7,24 @@ import sys
 
 #implementation of gcd
 def gcd(a,b) :
-	return_gcd = a
+	return_gcd = b
 	rest = a % b
+	print(rest, a, b)
 	if(rest != 0):
 		return_gcd = gcd(b,rest)
 	return return_gcd
 
 #Read in input from user into variable dec, short for decimal, set to float
 dec = float(sys.argv[1])
-to_mul_with = int(len(sys.argv[1])-1)
+to_mul_with = int(len(sys.argv[1]) - 2)
 #If input number is a decimal number, convert decimal into fraction, mod 1 on a decimal number will not return 0
 if(Decimal(dec) % 1 != 0): 
 	#get initial values multiplied with as many decimals there are
-	top = dec*10**to_mul_with
+	top = int(dec*10**to_mul_with)
 	bottom = 10**to_mul_with
 	#get gcd between top and bottom
 	saved_gcd = gcd(top, bottom)
+	print(saved_gcd, top, bottom)
 	#Divide top and bottom with gcd
 	bottom = int(bottom/saved_gcd)
 	top = int(top/saved_gcd)
