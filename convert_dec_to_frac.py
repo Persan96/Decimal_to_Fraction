@@ -1,7 +1,7 @@
 # Per Sandgren, Sweden, 28-11-2017
 # Small program converting decimals to fractions
 
-#import functions to check for decimal
+#import functions to check for decimal and sys to gain arguments set after executing script
 from decimal import Decimal
 import sys
 
